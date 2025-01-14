@@ -7,7 +7,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       - PORT=3000
-      - POSTGRES_HOST=d76120a33425
+      - POSTGRES_HOST=localhost
       - POSTGRES_PORT=5432
       - POSTGRES_DATABASE='fezinha'
       - POSTGRES_USER='fezinha'
@@ -27,6 +27,7 @@ services:
     platform: linux/x86_64
     image: postgres
     environment:
+      POSTGRES_HOST: 'localhost'
       POSTGRES_DATABASE: 'fezinha'
       POSTGRES_USER: 'fezinha'
       POSTGRES_PASSWORD: 'password'
@@ -35,8 +36,6 @@ services:
       - '5432:5432'
     expose:
       - '5432'
-    # volumes:
-    #   - "./scripts/schema.sql:/docker-entrypoint-initdb.d/1.sql"
 
 
 networks:
