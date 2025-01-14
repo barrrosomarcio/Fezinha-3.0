@@ -2,7 +2,8 @@ version: '3.7'
 
 services:
   app:
-    build: 
+    build:
+      context: .
       dockerfile: ./Dockerfile
     environment:
       - PORT=3000
