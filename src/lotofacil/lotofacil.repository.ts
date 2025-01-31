@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ConcursoLotoFacilEntity } from './lotofacil.entity';
 import { Repository } from 'typeorm';
+import { from } from 'rxjs';
 
 @Injectable()
 export class ConcursoLotoFacilEntityRepository {
@@ -11,14 +12,16 @@ export class ConcursoLotoFacilEntityRepository {
   ) {}
 
   getLastConcurso() {
-    return this.concursoLotofacilRepository
+    return from(this.concursoLotofacilRepository
       .createQueryBuilder()
       .orderBy('concurso', 'DESC')
       .limit(1)
-      .getOne();
+      .getOne());
   }
 
+
   save(concursos: ConcursoLotoFacilEntity[]) {
-    return this.concursoLotofacilRepository.save(concursos);
+    return from(this.concursoLotofacilRepository.save(concursos));
   }
+
 }

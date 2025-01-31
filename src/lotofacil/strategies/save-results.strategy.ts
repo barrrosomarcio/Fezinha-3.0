@@ -1,14 +1,16 @@
 import { Injectable } from '@nestjs/common';
-import { ConcursoLotoFacilEntityRepository } from './lotofacil.repository';
-import { RESULTS } from './lotofacil.data.js';
-import { ConcursoLotoFacilEntity } from './lotofacil.entity';
+import { ConcursoLotoFacilEntityRepository } from '../lotofacil.repository';
+import { RESULTS } from '../lotofacil.data.js';
+import { ConcursoLotoFacilEntity } from '../lotofacil.entity';
 import { from, of, mergeMap, Observable, map, toArray } from 'rxjs';
 import { mapConcursoLotoFacil } from 'src/shared/mappers/lotofacil';
 
 type Batch = Array<ConcursoLotoFacilEntity>;
 
 @Injectable()
-export class LotoFacilService {
+export class SaveResultsStrategy {
+
+  
   constructor(
     private readonly lotoFacilRepository: ConcursoLotoFacilEntityRepository,
   ) {}
