@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { from, Observable } from 'rxjs';
-import { ConcursoLotoFacilEntity } from './lotofacil.entity';
+import { ConcursoLotoFacilEntity } from './domain/lotofacil.entity';
 
 @Injectable()
 export class ConcursoLotoFacilEntityRepository {

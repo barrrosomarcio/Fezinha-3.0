@@ -1,4 +1,4 @@
-import { ConcursoLotoFacilEntity } from 'src/lotofacil/lotofacil.entity';
+import { ConcursoLotoFacilEntity } from 'src/lotofacil/domain/lotofacil.entity';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { Migrations } from './migrations/migrations';
 

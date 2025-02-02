@@ -1,4 +1,4 @@
-import { ConcursoLotoFacilEntity } from "./lotofacil.entity";
+import { ConcursoLotoFacilEntity } from "./domain/lotofacil.entity";
 
 // https://tableconvert.com/pt/excel-to-json
 export const RESULTS = [

@@ -1,4 +1,4 @@
-import { ConcursoLotoFacilEntity } from 'src/lotofacil/lotofacil.entity';
+import { ConcursoLotoFacilEntity } from 'src/lotofacil/domain/lotofacil.entity';
 import { formataStringData } from '../formatters/date';
 import { realToDecimal } from '../formatters/currency';
 

@@ -3,7 +3,7 @@ import { from, of, mergeMap, Observable, map, toArray } from 'rxjs';
 import { mapConcursoLotoFacil, RawResult } from '../../shared/mappers/lotofacil';
 import { ConcursoLotoFacilEntityRepository } from '../lotofacil.repository';
 import { RESULTS } from '../lotofacil.data';
-import { ConcursoLotoFacilEntity } from '../lotofacil.entity';
+import { ConcursoLotoFacilEntity } from '../domain/lotofacil.entity';
 
 type Batch = Array<ConcursoLotoFacilEntity>;
 
