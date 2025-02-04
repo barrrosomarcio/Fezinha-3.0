@@ -8,7 +8,7 @@ export class ConcursoLotoFacilEntity {
   })
   concurso: number;
 
-  @Column({ type: 'timestamp' })
+  @Column({ type: 'timestamp', name: 'data_sorteio' })
   dataSorteio: string;
 
   @Column({ type: 'smallint' })
